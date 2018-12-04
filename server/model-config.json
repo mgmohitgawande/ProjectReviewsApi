@@ -39,5 +39,17 @@
   "user": {
     "dataSource": "mongodb",
     "public": true 
+  },
+  "ApplicationCredential": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "UserCredential": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "UserIdentity": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }
