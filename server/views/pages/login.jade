@@ -1,0 +1,30 @@
+extends ../layouts/layout
+
+block content
+  .row
+    .col-md-12
+      h1 Login:
+      ul.list-inline.list-unstyled
+        li
+          a.btn.btn-primary(href='/local') Login with local account
+        li
+          a.btn.btn-primary(href='/ldap') Login with ldap account
+        li
+          a.btn.btn-primary(href="/auth/facebook") Login with Facebook
+        li
+          a.btn.btn-primary(href="/auth/google") Login with Google
+        li
+          a.btn.btn-primary(href="/auth/twitter") Login with Twitterh1 Login:
+    .col-md-12
+      h1 Login Hotel:
+      ul.list-inline.list-unstyled
+        li
+          a.btn.btn-primary(href='/hotel-auth/local') Login with local account
+        li
+          a.btn.btn-primary(href="/hotel-auth/facebook") Login Hotel with Facebook
+        li
+          a.btn.btn-primary(href="/hotel-auth/google") Login Hotel with Google
+      br
+      if (messages.error)
+        p
+          span(style="color:red")= messages.error
