@@ -1,0 +1,38 @@
+{
+    "local": {
+      "provider": "local",
+      "module": "passport-local",
+      "usernameField": "username",
+      "passwordField": "password",
+      "authPath": "/auth/local",
+      "successRedirect": "/auth/account"
+    },
+    "facebook-login": {
+      "provider": "facebook",
+      "module": "passport-facebook",
+      "profileFields": ["picture", "gender", "link", "locale", "name", "timezone", "verified", "email", "updated_time"],
+      "clientID": "1677677929027734",
+      "appID": "1677677929027734",
+      "clientSecret": "574c6d0232d813086efcbc7c79fd295f",
+      "callbackURL": "http://devapifood.leparfaitdesigns.com/auth/facebook/callback",
+      "authPath": "/auth/facebook",
+      "callbackPath": "/auth/facebook/callback",
+      "successRedirect": "/auth/account",
+      "scope": ["email"],
+      "authOptions": {
+        "display": "popup"
+      }
+    },
+    "google-login": {
+      "provider": "google",
+      "module": "passport-google-oauth",
+      "strategy": "OAuth2Strategy",
+      "clientID": "927749913151-6npp2mhnsutj48092ighs67aed2sq7pl.apps.googleusercontent.com",
+      "clientSecret": "yTnYMalRqqOH7VKGptAPOh3D",
+      "callbackURL": "http://devapifood.leparfaitdesigns.com/auth/google/callback",
+      "authPath": "/auth/google",
+      "callbackPath": "/auth/google/callback",
+      "successRedirect": "/auth/account",
+      "scope": ["email", "profile"]
+    }
+}
