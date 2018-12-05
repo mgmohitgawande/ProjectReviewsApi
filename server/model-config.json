@@ -14,12 +14,12 @@
       "./mixins"
     ]
   },
-  "User": {
-    "dataSource": "mongodb"
-  },
   "AccessToken": {
     "dataSource": "mongodb",
     "public": false
+  },
+  "User": {
+    "dataSource": "mongodb"
   },
   "ACL": {
     "dataSource": "mongodb",
@@ -51,5 +51,8 @@
   "UserIdentity": {
     "dataSource": "mongodb",
     "public": true
+  },
+  "Email": {
+    "dataSource": "ses"
   }
 }
