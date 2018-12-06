@@ -1,11 +1,19 @@
 {
   "name": "user",
-  "plural": "users",
   "base": "User",
+  "plural": "user",
+  "idInjection": true,
+  "options": {
+    "strictObjectIDCoercion": true
+  },
+  "properties": {},
+  "restrictResetPasswordTokenScope": true,
+  "emailVerificationRequired": true,
+  "validations": [],
   "relations": {
     "accessTokens": {
       "type": "hasMany",
-      "model": "accessToken",
+      "model": "AccessToken",
       "foreignKey": "userId"
     },
     "identities": {
@@ -19,7 +27,25 @@
       "foreignKey": "userId"
     }
   },
-  "validations": [],
-  "acls": [],
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "accessType": "READ",
+      "permission": "ALLOW"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "inititate-reset-password"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "change-password-with-otp"
+    }
+  ],
   "methods": []
 }
