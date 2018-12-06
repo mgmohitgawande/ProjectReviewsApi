@@ -11,6 +11,11 @@
         "maxAge": 86400
       }
     },
+    "morgan": {
+      "params": ["dev", {
+        "buffer": true
+      }]
+    },
     "helmet#xssFilter": {},
     "helmet#frameguard": {
       "params": { "action": "deny" }
